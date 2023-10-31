@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
+
 namespace GitWebApp.Controllers
 {
     public class HomeController : Controller
@@ -13,9 +14,15 @@ namespace GitWebApp.Controllers
             _logger = logger;
         }
 
+        
+
         public IActionResult Index()
         {
-            return View();
+            //return View();
+
+            var name = "Joel Mensah";
+            return Json(new { Name = name });
+
         }
 
         public IActionResult Privacy()
